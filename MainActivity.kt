@@ -119,6 +119,11 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Car.init(this)
+        if (CrashLog.read(this) != null) {
+            startActivity(Intent(this, CrashActivity::class.java))
+            finish()
+            return
+        }
         setContentView(R.layout.activity_main)
         val ta = obtainStyledAttributes(intArrayOf(android.R.attr.textColorPrimary))
         colorPrimaryText = ta.getColor(0, 0xFF000000.toInt())

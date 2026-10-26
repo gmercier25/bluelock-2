@@ -40,6 +40,10 @@
         </activity>
 
         <activity
+            android:name=".CrashActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".SettingsActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />

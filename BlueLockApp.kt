@@ -11,6 +11,7 @@ import android.content.Intent
 class BlueLockApp : Application() {
     override fun onCreate() {
         super.onCreate()
+        CrashLog.install(this)
         Car.init(this)
         Notifs.ensureChannels(this)
     }
