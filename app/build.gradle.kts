@@ -15,6 +15,8 @@ android {
         versionName = "1.0"
     }
 
+    // Clé de signature personnelle (fixe) : permet d'installer les mises à jour
+    // par-dessus l'ancienne version sans perdre tes réglages.
     signingConfigs {
         create("perso") {
             storeFile = file("../keystore/bluelock.jks")
@@ -47,5 +49,6 @@ android {
     }
 }
 
+// Aucune dépendance externe : uniquement le SDK Android et Kotlin.
 dependencies {
 }
